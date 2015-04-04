@@ -20,6 +20,12 @@ namespace Michal_Sitarczuk_Lab7_CloudWS
     // [System.Web.Script.Services.ScriptService]
     public class WebServicesMultiplatform : System.Web.Services.WebService
     {
+       [WebMethod]
+        public String debugTest()
+        {
+            return "This is the debug test string";
+        }
+
         private SqlConnection DBConn()
         {
             SqlConnection dbcon = null;
