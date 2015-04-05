@@ -228,7 +228,7 @@ namespace Michal_Sitarczuk_Lab7_CloudWS
             SqlDataReader rd = com.ExecuteReader();
             while (rd.Read())
             {
-                allUsers.Add(rd["Surname"].ToString() + ", " + rd["FirstName"].ToString() + ", " + rd["Username"]);
+                allUsers.Add(rd["Surname"].ToString() + ", " + rd["FirstName"].ToString() + " #" + rd["Username"]);
                 //Debug.WriteLine(rd["Language"].ToString());
             }
             rd.Close();
