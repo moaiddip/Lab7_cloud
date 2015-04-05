@@ -32,7 +32,10 @@ namespace Michal_Sitarczuk_Lab7_CloudWS
             try
             {
                 //FIGURE OUT RELATIVE PATHS
-                dbcon = new SqlConnection("Data Source=(LocalDB)\\v12.0;AttachDbFilename=E:\\other stuff\\Skydrive\\PROJECTS eclipse netbeans etc\\VisualStudio\\Michal-Sitarczuk-Lab7-CloudWS\\Michal-Sitarczuk-Lab7-CloudWS\\App_Data\\Database1.mdf;Integrated Security=True;Connect Timeout=30");
+                //dbcon = new SqlConnection("Data Source=(LocalDB)\\v12.0;AttachDbFilename=E:\\other stuff\\Skydrive\\PROJECTS eclipse netbeans etc\\VisualStudio\\Michal-Sitarczuk-Lab7-CloudWS\\Michal-Sitarczuk-Lab7-CloudWS\\App_Data\\Database1.mdf;Integrated Security=True;Connect Timeout=30");
+                //dbcon = new SqlConnection("Data Source=(LocalDB)\\v12.0;AttachDbFilename=|DataDirectory|\\Database1.mdf;Integrated Security=True;Connect Timeout=30");
+                dbcon = new SqlConnection("workstation id=dbLoQui.mssql.somee.com;packet size=4096;user id=db_LoQui;pwd=123.Test.321;data source=dbLoQui.mssql.somee.com;persist security info=False;initial catalog=dbLoQui");
+
                 dbcon.Open();
                 Debug.WriteLine("Coonection to DB established!");
                 return dbcon;
